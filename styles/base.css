@@ -179,10 +179,6 @@ main {
     transition: transform 0.3s ease;
 }
 
-.list-link:hover {
-    transform: scale(1.03);
-}
-
 /* Footer CSS */
 footer {
     text-align: center;
