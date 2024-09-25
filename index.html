@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Leonardo Correa</title>
+    <meta description="Student home page for Leonardo Gameiro Correa">
+    <meta author="Leonardo Gameiro Correa">
+    <link href="styles/base.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="page-title">WDD 131: Dynamic Web Fundamentals - <span>Leonardo G. Correa</span></h1>
+        <nav class="nav-bar">
+            <div class="nav-item">
+                <a class="nav-link" href="https://www.linkedin.com/in/leonardo-correa-12762827b/" target="_blank">LinkedIn</a>
+            </div>
+            <div class="nav-item">
+                <a href="https://byui.instructure.com/" target="_blank"  class="nav-link">I-Learn</a>
+            </div>
+            <div class="nav-item">
+                <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/12?lang=eng&id=p27#p27" target="_blank" class="nav-link">Scripture</a>
+            </div>
+            <div class="nav-item">
+                <a href="#" class="nav-link">Final Project</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="card">
+            <div class="section-header">
+                <p class="section-title">About Me</p>
+            </div>
+            <div class="section-content">
+                <div class="content-1">
+                    <p class="about-me">My name is Leonardo Correa, I'm from São Paulo, Brazil. I was born in Londrina and moved to São Paulo after my full time mission in João Pessoa-PB. I'm currently working in a company as Front-end developer for web projects. I'm serving in my ward as pianist and bishopric secretary. I'm also engaged and my wedding is on Deceber 17th this year, I'm super excited for this new part of my life.</p>
+                    <img class="profile-image" src="/images/profile.jpg">
+                </div>
+                <div class="content-2">
+                    <div class="title-container-2">
+                        <p class="cont-2-title">São Paulo, Brazil</p>
+                    </div>
+                    <div class="state-container">
+                        <div class="state-flag">
+                            <img class="flag" src="/images/sao-paulo.png">
+                            <p class="state-name">Official São Paulo Flag</p>
+                        </div>
+                        <p class="description">
+                            São Paulo is Brazil's most populous state and a major economic hub, located in the southeastern region. It is known for its vibrant cities, with São Paulo City being the country's financial and cultural center. The state boasts a diverse economy driven by industries like finance, manufacturing, agriculture, and technology. It also has a rich cultural scene, blending modern urban life with historical landmarks, arts, and cuisine.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="card">
+            <div class="section-header">
+                <p class="section-title">Web Dev Resources</p>
+            </div>
+            <div class="section-2-content">
+                <div class="content-3">
+                    <a class="list-link" href="https://www.w3schools.com" target="_blank">W3 School</a>
+                    <a class="list-link" href="https://uicolors.app/create" target="_blank">UI Colors</a>
+                    <a class="list-link" href="https://stackoverflow.com" target="_blank">Stack Overflow</a>
+                    <a class="list-link" href="https://cssgradient.io" target="_blank">CSS Gradient</a>
+                    <a class="list-link" href="https://www.udemy.com" target="_blank">Udemy</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p class="footer-item">
+            &copy; <span id="currentyear"></span> - Leonardo Gameiro Correa - Brazil
+        </p>
+        <p class="footer-item" id="lastmodified"></p>
+    </footer>
+
+    <script src="scripts/getdates.js"></script>
+</body>
+</html>

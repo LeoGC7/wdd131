@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Header CSS */
+.page-title {
+    text-align: center;
+    background-color: #3c68af;
+    color: white;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.page-title span {
+    color: #e5e059;
+}
+
+.nav-bar {
+    display: flex;
+    padding: 10px;
+    background-color: #223049;
+    justify-content: space-around;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.nav-item {
+    transition: transform 0.3s ease;
+}
+
+.nav-item:hover {
+    transform: scale(1.05);
+}
+
+
+/* Main CSS */
+
+/* First Section */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px 0px rgba(211, 211, 211, 0.7);
+}
+
+.card:first-of-type {
+    flex: 0 0 60%;
+}
+
+.card:last-of-type {
+    flex: 0 0 30%;
+}
+
+.section-header {
+    text-align: center;
+    background-color: #3c68af;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.section-title {
+    font-size: 30px;
+    font-weight: Bold;
+    color: white;
+    margin: 0;
+    padding: 8px 0;
+}
+
+.section-content {
+    padding: 10px 30px;
+    margin-top: 20px;
+}
+
+.content-1 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-me {
+    line-height: 35px;
+    font-size: 18px;
+}
+
+.profile-image {
+    width: 250px;
+    border-radius: 5px;
+}
+
+.content-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.title-container-2 {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid lightgray;
+    margin-bottom: 20px;
+    width: 600px;
+}
+
+.cont-2-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.state-container {
+    display: flex;
+    gap: 15px;
+}
+
+.state-flag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flag {
+    width: 300px
+}
+
+.state-name {
+    font-style: italic;
+}
+
+.description {
+    font-size: 18px;
+    margin: 0;
+    line-height: 35px;
+}
+
+/* Second Section */
+.section-2-content {
+    padding: 10px 30px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+.content-3 {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.resources {
+    list-style: disc;
+    padding: 0;
+    margin: 0;
+}
+
+.list-link {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease;
+}
+
+.list-link:hover {
+    transform: scale(1.03);
+}
+
+/* Footer CSS */
+footer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #223049;
+    padding: 15px 0;
+}
+
+.footer-item {
+    margin: 0;
+    color: white;
+    font-size: 20px;
+}
+
+#lastmodified {
+    color:#e5e059;
+}
