@@ -1,19 +1,16 @@
-@media screen and (min-width: 880px) and (max-width: 1250px) {
+@media screen and (min-width: 940px) and (max-width: 1250px) {
     .gallery {
         grid-template-columns: 1fr 1fr;
     }
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 940px) {
     .nav-bar {
         display: none;
     }
 
     .nav-mobile {
-        position: fixed;
         width: inherit;
-        left: 0;
-        right: 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
