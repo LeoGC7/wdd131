@@ -38,6 +38,15 @@ body {
     color: #fddd10;
 }
 
+/* Mobile Nav Bar */
+.nav-mobile {
+    display: none;
+}
+
+.nav-items-m {
+    display: none;
+}
+
 /* Main CSS */
 main {
     max-width: 2000px;

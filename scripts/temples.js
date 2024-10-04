@@ -23,3 +23,13 @@ const formattedTime = lastModified.toLocaleTimeString('en-US', optionsTime);
 const dateContainer = document.getElementById("lastmodified");
 
 dateContainer.textContent = `Last modification: ${formattedDate} ${formattedTime}`;
+
+function ShowNav() {
+    const lateralNav = document.getElementById('lateralNav');
+
+    if (lateralNav.classList.contains('hidden')) {
+        lateralNav.classList.remove('hidden');
+    } else {
+        lateralNav.classList.add('hidden')
+    }
+}
