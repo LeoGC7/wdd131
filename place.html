@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Leonardo Gameiro Correa">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals week 03 place project">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="scripts/place.js" defer></script>
+    <title>São Paulo</title>
+</head>
+<body>
+    <header>
+        <h1 class="place-name">São Paulo</h1>
+    </header>
+    <main>
+        <picture>
+            <source media="(max-width: 840px)" srcset="images/sao-paulo-small_1.webp" alt="São-Paulo-City">
+            <img class="background-image" src="images/sao-paulo-default_1.webp" alt="">
+        </picture>
+        <div class="left-card">
+            <div class="left-header">
+                <h1 class="left-title">Data</h1>
+            </div>
+            <div class="data-container">
+                <p class="data-item">Area: <span>1,521,202 km²</span></p>
+                <p class="data-item">Population: <span>11,451,999</span></p>
+                <p class="data-item">Time Zone: <span>GMT -3</span></p>
+                <p class="data-item">Calling Code: <span>+55 11</span></p>
+                <p class="data-item">Founded: <span>25 January 1554</span></p>
+                <p class="data-item">Elevation: <span>760m (2,500 ft)</span></p>
+
+            </div>
+        </div>
+        <div class="right-card">
+            <div class="right-header">
+                <h1 class="right-title">Weather</h1>
+                <img src="images/weather-icon.svg" alt="weather-icon" class="weather">
+            </div>
+            <div class="data-container">
+                <p class="data-item">Temperature: <span>20°C</span></p>
+                <p class="data-item">Conditions: <span>Mostly cloudy</span></p>
+                <p class="data-item">Wind: <span>14km/h</span></p>
+                <p class="data-item">Wind Chill: <span id="windChill"></span></p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="footer-item">
+            &copy; <span id="currentyear"></span> - Leonardo Gameiro Correa - Brazil
+        </p>
+        <p class="footer-item" id="lastmodified"></p>
+    </footer>
+</body>
+</html>
