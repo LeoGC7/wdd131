@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD131 - Temple Gallery exemple">
+    <meta name="author" content="Leonardo Gameiro Correa">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="scripts/filtered-temples.js" defer></script>
+    <title>Temple Gallery</title>
+</head>
+<body>
+    <header>
+        <h1 class="nav-title">Temple Gallery</h1>
+        <nav class="nav-bar">
+            <div class="nav-items">
+                <a href="#" class="nav-item" onclick="showAll()">Home</a>
+                <a href="#" class="nav-item" onclick="oldFilter()">Old</a>
+                <a href="#" class="nav-item" onclick="newFilter()">New</a>
+                <a href="#" class="nav-item" onclick="largeFilter()">Large</a>
+                <a href="#" class="nav-item" onclick="smallFilter()">Small</a>
+            </div>
+        </nav>
+        <nav class="nav-mobile">
+            <button class="button-m" onclick="ShowNav()">&#9776;</button>
+        </nav>
+        <div class="nav-items-m hidden" id="lateralNav">
+            <div class="close">
+                <button class="close-button" onclick="ShowNav()">X</button>
+            </div>
+            <a href="#" class="nav-item-m" onclick="showAll()">Home</a>
+            <a href="#" class="nav-item-m" onclick="oldFilter()">Old</a>
+            <a href="#" class="nav-item-m" onclick="newFilter()">New</a>
+            <a href="#" class="nav-item-m" onclick="largeFilter()">Large</a>
+            <a href="#" class="nav-item-m" onclick="smallFilter()">Small</a>
+        </div>
+    </header>
+    <main>
+        <h2 class="title"></h2>
+        <div class="gallery" id="gallery">
+        </div>
+    </main>
+    <footer>
+        <p class="footer-item">
+            &copy; <span id="currentyear"></span> - Leonardo Gameiro Correa - Brazil
+        </p>
+        <p class="footer-item" id="lastmodified"></p>
+    </footer>
+</html>

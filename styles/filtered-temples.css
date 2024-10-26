@@ -1,0 +1,130 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* Nav Bar CSS */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #223049;
+}
+
+.nav-title {
+    font-size: 30px;
+    margin: 0;
+    color: white;
+}
+
+.nav-items {
+    display: flex;
+    gap: 100px;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.nav-items a:hover {
+    color: #fddd10;
+}
+
+/* Mobile Nav Bar */
+.nav-mobile {
+    display: none;
+}
+
+.nav-items-m {
+    display: none;
+}
+
+/* Main CSS */
+main {
+    max-width: 2000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.title {
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.temple-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 25px;
+    border-radius:15px;
+    box-shadow: 0px 0px 10px 0px rgba(200, 200, 200, 0.7);
+}
+
+.temple-name {
+    margin: 0;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.temple-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0px 15px 0px;
+}
+
+.info {
+    margin: 0;
+    color:#223049;
+    font-weight: bold;
+}
+
+.info span {
+    color: black;
+    font-weight: normal;
+}
+
+.image {
+    width: 300px;
+    border-radius: 10px;
+}
+
+
+
+/* Footer CSS */
+footer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #223049;
+    padding: 15px 0;
+}
+
+.footer-item {
+    margin: 0;
+    color: white;
+    font-size: 20px;
+}
+
+#lastmodified {
+    color:#fddd10;
+}
+
