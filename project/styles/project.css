@@ -1,0 +1,50 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #0e0e11;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plan-header {
+    text-align: center;
+}
+
+.title {
+    color: #34a853;
+}
+
+.document-section {
+    width: 1000px;
+    padding: 10px 20px;
+
+}
+
+li {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+span {
+    font-weight: bold;
+}
+
+.subtitle {
+    color: #34a853;
+}
+
+#dark {
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.desktop {
+    width: 1000px;
+}
