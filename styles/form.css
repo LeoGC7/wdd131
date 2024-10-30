@@ -1,0 +1,111 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+/* Header */
+.header {
+    text-align: center;
+    color: white;
+    background-color: #223049;
+}
+
+/* Main */
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.form-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-select {
+    border: 1px solid #223049;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.form-input {
+    border: 1px solid #223049;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.form-text {
+    border: 1px solid #223049;
+    padding: 10px;
+    border-radius: 5px;
+    height: 80px;
+    resize: none;
+}
+
+.form-label {
+    position: absolute;
+    font-size: 12px;
+    background-color: white;
+    padding: 5px;
+    top: -12px;
+    left: 5px;
+}
+
+.form-button {
+    display: flex;
+    justify-content: center;
+}
+
+.form-button input {
+    background-color: #223049;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.form-button input:hover {
+    transform: scale(1.03);
+}
+
+/* Footer CSS */
+footer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #223049;
+    padding: 15px 0;
+}
+
+.footer-item {
+    margin: 0;
+    color: white;
+    font-size: 20px;
+}
+
+#lastmodified {
+    color:#e5e059;
+}

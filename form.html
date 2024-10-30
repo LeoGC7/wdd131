@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">Product Review</h1>
+    </header>
+    <main class="main">
+        <div class="form-container">
+            <form action="review.html" action="get" class="review-form">
+                <div class="form-item">
+                    <label for="product" class="form-label">Product Name</label>
+                    <select name="product" id="product" class="form-select" required>
+                        <option value="none" disabled="true" selected="true">Select a Product...</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <p class="item-name">Overall Rating</p>
+                    <div class="stars-container">
+                
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label for="date" class="form-label">Date of Installation</label>
+                    <input type="date" class="form-input" id="date" required>
+                </div>
+                <div class="form-item">
+                    <div class="check-item">
+                        <p class="item-name">Which features did you find useful in the project? (check all that apply)</p>
+                        <input type="checkbox" class="check-input" id="check-1" name="checkbox" value="Durability">
+                        <label for="check-2" class="check-label">Ease of Use</label>
+                    </div>
+                    <div class="check-item">
+                        <input type="checkbox" class="check-input" id="check-2" name="checkbox" value="Ease of Use">
+                        <label for="check-1" class="check-label">Durability</label>
+                    </div>
+                    <div class="check-item">
+                        <input type="checkbox" class="check-input" id="check-4" name="checkbox" value="Perfomance">
+                    <label for="check-3" class="check-label">Perfomance</label>
+                    </div>
+                    <div class="check-item">
+                        <input type="checkbox" class="check-input" id="check-5" name="checkbox" value="Design">
+                        <label for="check-4" class="check-label">Design</label>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label for="textarea" class="form-label">Written Review <span>(Optional)</span></label>
+                    <textarea class="form-text" id="textarea" name="textarea"></textarea>
+                </div>
+                <div class="form-item">
+                    <label for="user-name" class="form-label">Your name <span>(Optional)</span></label>
+                    <input type="text" id="user-name" name="user-name" class="form-input">
+                </div>
+                <div class="form-button">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+<footer>
+    <p class="footer-item">
+        &copy; <span id="currentyear"></span> - Leonardo Gameiro Correa - Brazil
+    </p>
+    <p class="footer-item" id="lastmodified"></p>
+</footer>
+</html>
