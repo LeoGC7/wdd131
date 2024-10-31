@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals responsive form activity which keep track of how many answers the form received">
+    <meta name="author" content="Leonardo Gameiro Correa">
     <title>Document</title>
     <link rel="stylesheet" href="styles/form.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +18,7 @@
     </header>
     <main class="main">
         <div class="form-container">
-            <form action="review.html" action="get" class="review-form">
+            <form action="review.html" method="get" class="review-form">
                 <div class="form-item">
                     <label for="product" class="form-label">Product Name</label>
                     <select name="product" id="product" class="form-select" required>
@@ -26,7 +28,36 @@
                 <div class="form-item">
                     <p class="item-name">Overall Rating</p>
                     <div class="stars-container">
-                
+                        <div class="star">
+                            <label for="1-star" class="start-label">
+                                <img src="images/star.png" alt="star" class="star-icon">
+                            </label>
+                            <input type="radio" id="1-star" name="star" class="form-radio" required>
+                        </div>
+                        <div class="star">
+                            <label for="2-star" class="start-label">
+                                <img src="images/star.png" alt="star" class="star-icon">
+                            </label>
+                            <input type="radio" id="2-star" name="star" class="form-radio" required>
+                        </div>
+                        <div class="star">
+                            <label for="3-star" class="start-label">
+                                <img src="images/star.png" alt="star" class="star-icon">
+                            </label>
+                            <input type="radio" id="3-star" name="star" class="form-radio" required>
+                        </div>
+                        <div class="star">
+                            <label for="4-star" class="start-label">
+                                <img src="images/star.png" alt="star" class="star-icon">
+                            </label>
+                            <input type="radio" id="4-star" name="star" class="form-radio" required>
+                        </div>
+                        <div class="star">
+                            <label for="5-star" class="start-label">
+                                <img src="images/star.png" alt="star" class="star-icon">
+                            </label>
+                            <input type="radio" id="5-star" name="star" class="form-radio" required>
+                        </div>
                     </div>
                 </div>
                 <div class="form-item">
@@ -37,18 +68,18 @@
                     <div class="check-item">
                         <p class="item-name">Which features did you find useful in the project? (check all that apply)</p>
                         <input type="checkbox" class="check-input" id="check-1" name="checkbox" value="Durability">
-                        <label for="check-2" class="check-label">Ease of Use</label>
-                    </div>
-                    <div class="check-item">
-                        <input type="checkbox" class="check-input" id="check-2" name="checkbox" value="Ease of Use">
                         <label for="check-1" class="check-label">Durability</label>
                     </div>
                     <div class="check-item">
-                        <input type="checkbox" class="check-input" id="check-4" name="checkbox" value="Perfomance">
-                    <label for="check-3" class="check-label">Perfomance</label>
+                        <input type="checkbox" class="check-input" id="check-2" name="checkbox" value="Ease of Use">
+                        <label for="check-2" class="check-label">Ease of Use</label>
                     </div>
                     <div class="check-item">
-                        <input type="checkbox" class="check-input" id="check-5" name="checkbox" value="Design">
+                        <input type="checkbox" class="check-input" id="check-3" name="checkbox" value="Perfomance">
+                        <label for="check-3" class="check-label">Perfomance</label>
+                    </div>
+                    <div class="check-item">
+                        <input type="checkbox" class="check-input" id="check-4" name="checkbox" value="Design">
                         <label for="check-4" class="check-label">Design</label>
                     </div>
                 </div>

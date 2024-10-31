@@ -14,6 +14,7 @@ body {
     padding: 0;
     height: 100%;
 }
+
 /* Header */
 .header {
     text-align: center;
@@ -51,6 +52,26 @@ body {
     border: 1px solid #223049;
     padding: 10px;
     border-radius: 5px;
+}
+
+.stars-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.star-icon {
+    width: 30px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.star-icon:hover {
+    transform: scale(1.1);
+}
+
+.form-radio {
+    display: none;
 }
 
 .form-text {

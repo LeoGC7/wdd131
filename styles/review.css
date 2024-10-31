@@ -1,0 +1,55 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    color: white;
+    background-color: #223049;
+}
+
+/* Main */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#sub-number {
+    font-weight: bold;
+}
+
+/* Footer CSS */
+footer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #223049;
+    padding: 15px 0;
+}
+
+.footer-item {
+    margin: 0;
+    color: white;
+    font-size: 20px;
+}
+
+#lastmodified {
+    color:#e5e059;
+}
