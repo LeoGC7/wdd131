@@ -22,7 +22,7 @@
                 <div class="form-item">
                     <label for="product" class="form-label">Product Name</label>
                     <select name="product" id="product" class="form-select" required>
-                        <option value="none" disabled="true" selected="true">Select a Product...</option>
+                        <option value="" disabled selected>Select a Product...</option>
                     </select>
                 </div>
                 <div class="form-item">
@@ -32,31 +32,31 @@
                             <label for="1-star" class="start-label">
                                 <img src="images/star.png" alt="star" class="star-icon">
                             </label>
-                            <input type="radio" id="1-star" name="star" class="form-radio" required>
+                            <input type="radio" id="1-star" name="rating" class="form-radio" required>
                         </div>
                         <div class="star">
                             <label for="2-star" class="start-label">
                                 <img src="images/star.png" alt="star" class="star-icon">
                             </label>
-                            <input type="radio" id="2-star" name="star" class="form-radio" required>
+                            <input type="radio" id="2-star" name="rating" class="form-radio" required>
                         </div>
                         <div class="star">
                             <label for="3-star" class="start-label">
-                                <img src="images/star.png" alt="star" class="star-icon">
+                                <img src="images/star.png" alt="rating" class="star-icon">
                             </label>
-                            <input type="radio" id="3-star" name="star" class="form-radio" required>
+                            <input type="radio" id="3-star" name="rating" class="form-radio" required>
                         </div>
                         <div class="star">
                             <label for="4-star" class="start-label">
                                 <img src="images/star.png" alt="star" class="star-icon">
                             </label>
-                            <input type="radio" id="4-star" name="star" class="form-radio" required>
+                            <input type="radio" id="4-star" name="rating" class="form-radio" required>
                         </div>
                         <div class="star">
                             <label for="5-star" class="start-label">
                                 <img src="images/star.png" alt="star" class="star-icon">
                             </label>
-                            <input type="radio" id="5-star" name="star" class="form-radio" required>
+                            <input type="radio" id="5-star" name="rating" class="form-radio" required>
                         </div>
                     </div>
                 </div>
@@ -97,11 +97,11 @@
             </form>
         </div>
     </main>
+    <footer>
+        <p class="footer-item">
+            &copy; <span id="currentyear"></span> - Leonardo Gameiro Correa - Brazil
+        </p>
+        <p class="footer-item" id="lastmodified"></p>
+    </footer>
 </body>
-<footer>
-    <p class="footer-item">
-        &copy; <span id="currentyear"></span> - Leonardo Gameiro Correa - Brazil
-    </p>
-    <p class="footer-item" id="lastmodified"></p>
-</footer>
 </html>
