@@ -112,16 +112,13 @@ function removeIncome(button) {
     const category = row.cells[1].textContent;
     const value = row.cells[2].textContent;
 
-    // Remove from the table
     row.remove();
 
-    // Remove from local storage
     let incomes = JSON.parse(localStorage.getItem('incomes')) || [];
     incomes = incomes.filter(inc => !(inc.date === date && inc.category === category && inc.value === value));
     localStorage.setItem('incomes', JSON.stringify(incomes));
-    
-    // Update total income after removal
-    totalIncome -= parseFloat(value); // Subtract the removed income from total
-    localStorage.setItem('totalIncome', totalIncome); // Update total in local storage
-    console.log(`Total Income: ${totalIncome}`); // Print updated total to console
+
+    totalIncome -= parseFloat(value);
+    localStorage.setItem('totalIncome', totalIncome);
+    console.log(`Total Income: ${totalIncome}`);
 }
