@@ -21,10 +21,10 @@ function settingsTab() {
 // Total income initial value
 let totalIncome = 0;
 
-// Load categories and incomes from local storage when the apge is loaded
+// Load categories and incomes from local storage when the page is loaded
 document.addEventListener("DOMContentLoaded", () => {
     loadIncomeCategories();
-    loadIncomes();
+    loadIncomesData();
 });
 
 // Function to load income categories into the select dropdown
@@ -58,8 +58,11 @@ function addIncome() {
         `;
 
         tbody.appendChild(tr);
-        saveIncome(dateInput, categorySelect, valueInput);
+        saveIncomeData(dateInput, categorySelect, valueInput);
         updateTotalIncome(valueInput);
+        updateIncomeCategoryTotal(categorySelect, valueInput); // Update category total
+
+        printIncomeTotals(); // Print totals after adding an income
         
         document.getElementById("date").value = '';
         document.getElementById("value").value = '';
@@ -72,18 +75,17 @@ function addIncome() {
 function updateTotalIncome(value) {
     totalIncome += parseFloat(value);
     localStorage.setItem('totalIncome', totalIncome);
-    console.log(`Total Income: ${totalIncome}`);
 }
 
 // Function to save the income to local storage
-function saveIncome(date, category, value) {
+function saveIncomeData(date, category, value) {
     const incomes = JSON.parse(localStorage.getItem('incomes')) || [];
     incomes.push({ date, category, value });
     localStorage.setItem('incomes', JSON.stringify(incomes));
 }
 
 // Function to load incomes from local storage
-function loadIncomes() {
+function loadIncomesData() {
     const incomes = JSON.parse(localStorage.getItem('incomes')) || [];
     const tbody = document.querySelector(".income-table tbody");
     
@@ -99,10 +101,23 @@ function loadIncomes() {
         `;
         tbody.appendChild(tr);
         totalIncome += parseFloat(income.value);
+        updateIncomeCategoryTotal(income.category, income.value); // Update category total when loading
     });
 
-    localStorage.setItem('totalIncome', totalIncome)
-    console.log(`Total Income: ${totalIncome}`);
+    localStorage.setItem('totalIncome', totalIncome);
+    printIncomeTotals(); // Print totals after loading incomes
+}
+
+// Function to update income category total
+function updateIncomeCategoryTotal(category, value) {
+    let categoryTotals = JSON.parse(localStorage.getItem('categoryTotals')) || {};
+    
+    if (!categoryTotals[category]) {
+        categoryTotals[category] = 0; // Initialize if category doesn't exist
+    }
+    
+    categoryTotals[category] += parseFloat(value);
+    localStorage.setItem('categoryTotals', JSON.stringify(categoryTotals));
 }
 
 // Function to remove an income
@@ -120,5 +135,21 @@ function removeIncome(button) {
 
     totalIncome -= parseFloat(value);
     localStorage.setItem('totalIncome', totalIncome);
-    console.log(`Total Income: ${totalIncome}`);
+
+    // Update category total when an income is removed
+    updateIncomeCategoryTotalOnRemove(category, value);
+    printIncomeTotals(); // Print totals after removing an income
+}
+
+// Function to update income category total when removing an income
+function updateIncomeCategoryTotalOnRemove(category, value) {
+    let categoryTotals = JSON.parse(localStorage.getItem('categoryTotals')) || {};
+    
+    if (categoryTotals[category]) {
+        categoryTotals[category] -= parseFloat(value);
+        if (categoryTotals[category] < 0) {
+            categoryTotals[category] = 0; // Prevent negative totals
+        }
+        localStorage.setItem('categoryTotals', JSON.stringify(categoryTotals));
+    }
 }

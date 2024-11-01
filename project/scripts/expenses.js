@@ -23,12 +23,12 @@ let totalExpenses = 0;
 
 // Load categories and expenses from local storage when the page is loaded
 document.addEventListener("DOMContentLoaded", () => {
-    loadCategories();
-    loadExpenses();
+    loadExpenseCategories();
+    loadExpensesData();
 });
 
 // Function to load categories into the select dropdown
-function loadCategories() {
+function loadExpenseCategories() {
     const expenseSelect = document.getElementById("expense-select");
     const categories = JSON.parse(localStorage.getItem('expenseCategories')) || [];
 
@@ -58,8 +58,9 @@ function addExpense() {
         `;
 
         tbody.appendChild(tr);
-        saveExpense(dateInput, categorySelect, valueInput);
+        saveExpenseData(dateInput, categorySelect, valueInput);
         updateTotalExpenses(valueInput);
+        updateExpenseCategoryTotal(categorySelect, valueInput); // Update category total
         
         document.getElementById("date").value = '';
         document.getElementById("value").value = '';
@@ -76,14 +77,14 @@ function updateTotalExpenses(value) {
 }
 
 // Function to save the expense to local storage
-function saveExpense(date, category, value) {
+function saveExpenseData(date, category, value) {
     const expenses = JSON.parse(localStorage.getItem('expenses')) || [];
     expenses.push({ date, category, value });
     localStorage.setItem('expenses', JSON.stringify(expenses));
 }
 
 // Function to load expenses from local storage
-function loadExpenses() {
+function loadExpensesData() {
     const expenses = JSON.parse(localStorage.getItem('expenses')) || [];
     const tbody = document.querySelector(".expense-table tbody");
     
@@ -99,10 +100,23 @@ function loadExpenses() {
         `;
         tbody.appendChild(tr);
         totalExpenses += parseFloat(expense.value);
+        updateExpenseCategoryTotal(expense.category, expense.value); // Update category total when loading
     });
 
-    localStorage.setItem('totalExpenses', totalExpenses)
-    console.log(`Total Expenses: ${totalExpenses}`);
+    localStorage.setItem('totalExpenses', totalExpenses);
+    printExpenseTotals(); // Print totals after loading expenses
+}
+
+// Function to update expense category total
+function updateExpenseCategoryTotal(category, value) {
+    let categoryTotals = JSON.parse(localStorage.getItem('categoryTotals')) || {};
+    
+    if (!categoryTotals[category]) {
+        categoryTotals[category] = 0; // Initialize if category doesn't exist
+    }
+    
+    categoryTotals[category] += parseFloat(value);
+    localStorage.setItem('categoryTotals', JSON.stringify(categoryTotals));
 }
 
 // Function to remove an expense
@@ -117,8 +131,24 @@ function removeExpense(button) {
     let expenses = JSON.parse(localStorage.getItem('expenses')) || [];
     expenses = expenses.filter(exp => !(exp.date === date && exp.category === category && exp.value === value));
     localStorage.setItem('expenses', JSON.stringify(expenses));
-    
+
     totalExpenses -= parseFloat(value);
     localStorage.setItem('totalExpenses', totalExpenses);
-    console.log(`Total Expenses: ${totalExpenses}`);
+
+    // Update category total when an expense is removed
+    updateExpenseCategoryTotalOnRemove(category, value);
+    printExpenseTotals(); // Print totals after removing an expense
+}
+
+// Function to update expense category total when removing an expense
+function updateExpenseCategoryTotalOnRemove(category, value) {
+    let categoryTotals = JSON.parse(localStorage.getItem('categoryTotals')) || {};
+    
+    if (categoryTotals[category]) {
+        categoryTotals[category] -= parseFloat(value);
+        if (categoryTotals[category] < 0) {
+            categoryTotals[category] = 0; // Prevent negative totals
+        }
+        localStorage.setItem('categoryTotals', JSON.stringify(categoryTotals));
+    }
 }
