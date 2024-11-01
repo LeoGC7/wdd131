@@ -76,8 +76,8 @@ body {
 
 /* Main CSS */
 main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: center;
     padding: 25px 150px;
 }
 
@@ -114,9 +114,9 @@ main {
 }
 
 .left-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     gap: 60px;
+    flex-wrap: wrap;
 }
 
 .info-card {
@@ -250,27 +250,28 @@ td {
     }
 
     .left-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
         gap: 40px;
         place-items: center;
     }
 
     .info-card {
-        width: 100px;
-        height: 70px;
+        width: 150px;
+        height: 120px;
     }
 
     .card-title {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     .card-info {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     .card-info span {
-        font-size: 20px;
+        font-size: 28px;
     }
 
     canvas {
