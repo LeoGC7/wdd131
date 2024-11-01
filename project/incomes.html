@@ -35,6 +35,31 @@
                     </button>
                 </div>
             </nav>
+            <nav class="mobile-nav">
+                <div class="nav-left">
+                    <img src="images/coin.png" alt="logo" class="logo">
+                    <p class="site-name">Expense Tracker</p>
+                </div>
+                <div class="nav-right">
+                    <button class="mobile-button" onclick="showMobileItems()">
+                        &#9776
+                    </button>
+                </div>
+            </nav>
+            <div class="mobile-items hidden" id="mobileItems">
+                <button class="nav-item" onclick="homeTab()">
+                    <img src="images/home.png" alt="home-icon" class="nav-icon"> Home
+                </button>
+                <button class="nav-item" onclick="expensesTab()">
+                    <img src="images/coin.png" alt="home-icon" class="nav-icon"> Expenses
+                </button>
+                <button class="nav-item" onclick="incomesTab()">
+                    <img src="images/income.png" alt="home-icon" class="nav-icon"> Incomes
+                </button>
+                <button class="nav-item" onclick="settingsTab()">
+                    <img src="images/settings.png" alt="home-icon" class="nav-icon"> Settings
+                </button>
+            </div>
         </header>
         <main>
             <div class="incomes-header">

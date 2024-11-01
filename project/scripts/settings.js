@@ -98,3 +98,12 @@ function loadCategories() {
     });
 }
 
+function showMobileItems() {
+    const mobileItems = document.getElementById('mobileItems');
+
+    if (mobileItems.classList.contains('hidden')) {
+        mobileItems.classList.remove('hidden');
+    } else {
+        mobileItems.classList.add('hidden');
+    }
+}

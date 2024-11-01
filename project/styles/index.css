@@ -14,6 +14,14 @@ body {
 }
 
 /* Header CSS */
+.mobile-nav {
+    display: none;
+}
+
+.mobile-items {
+    display: none;
+}
+
 .nav-bar {
     display: flex;
     align-items: center;
@@ -217,5 +225,119 @@ td {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    main {
+        padding: 20px;
+    }    
+
+    .page-icon {
+        width: 30px;;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .page-description {
+        font-size: 16px;
+    }
+
+    .main-left {
+        padding: 50px 0px;
+    }
+
+    .left-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        place-items: center;
+    }
+
+    .info-card {
+        width: 100px;
+        height: 70px;
+    }
+
+    .card-title {
+        font-size: 16px;
+    }
+
+    .card-info {
+        font-size: 16px;
+    }
+
+    .card-info span {
+        font-size: 20px;
+    }
+
+    canvas {
+        width: 100px;
+    }
+
+    .graph-card {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        padding: 0;
+        height: 90px;
+    }
+    
+    .graph-title {
+        font-size: 16px;
+        margin: 0;
+        margin-bottom: 15px;;
+        color: white;
+        font-weight: bold;  
+    }
+    
+    #chart-percentage {
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        margin: 0;
+        bottom: 5%;
+    }
+
+    .nav-bar {
+        display: none;
+    }
+
+    .mobile-nav {
+        background-color: #0e0e11;
+        width: 100%;
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #34a853;
+        z-index: 1000;
+    }
+
+    .nav-left, .nav-right {
+        padding: 10px 20px;
+    }
+
+    .mobile-button {
+        background-color: transparent;
+        border: 2px solid #34a853;
+        border-radius: 5px;
+        color:#34a853;
+        font-weight: bold;
+    }
+
+    .mobile-items {
+        display: block;
+        position: fixed;
+        right: 0px;
+        padding: 10px;
+        background-color: #0e0e11;
+        border: 1px solid #34a853;
+        top: 50px;
+    }
+
+    .hidden {
+        display: none;
     }
 }
