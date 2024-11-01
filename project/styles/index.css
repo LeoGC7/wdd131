@@ -1,0 +1,215 @@
+/* General CSS */
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #0e0e11;
+}
+
+.wrapper {
+    max-width: 2000px;
+}
+
+/* Header CSS */
+.nav-bar {
+    display: flex;
+    align-items: center;
+    padding: 15px 40px;
+    justify-content: space-between;
+    border-bottom: 2px solid #34a853;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 30px;
+}
+
+.site-name {
+    margin: 0;
+    color: #34a853;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-right {
+    display: flex;
+    gap:  40px;
+}
+
+.nav-item {
+    display: flex;
+    gap: 10px;
+    padding: 10px 20px;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    color: #34a853;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.nav-item:hover {
+    outline: 2px solid #34a853;
+}
+
+.nav-icon {
+    width: 30px;
+}
+
+/* Main CSS */
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 25px 150px;
+}
+
+.main-left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.left-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.page-icon {
+    width: 60px;
+}
+
+.title {
+    font-size: 40px;
+    color: #34a853;
+    margin: 0;
+}
+
+.page-description {
+    color: #b4b4b4;
+    font-size: 20px;
+}
+
+.left-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.info-card {
+    padding: 30px;
+    background: rgb(180,180,180);
+    background: linear-gradient(180deg, rgba(180,180,180,1) 0%, rgba(131,131,132,1) 12%, rgba(94,94,95,1) 33%, rgba(14,14,17,1) 100%);
+    width: 250px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 30px;
+    margin: 0;
+    color: white;
+    font-weight: bold;
+}
+
+.card-info {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.card-info span {
+    font-size: 50px;;
+}
+
+.graph-card {
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 30px;
+    height: 180px;
+    width: fit-content;
+}
+
+.graph-title {
+    font-size: 30px;
+    margin: 0;
+    margin-bottom: 15px;;
+    color: white;
+    font-weight: bold;  
+}
+
+#chart-percentage {
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    bottom: 20%;
+}
+
+.main-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.expenses-table-container,
+.incomes-table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.table-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+table {
+    width: 70%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #34a853;
+    color: white;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #59595a;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #818181;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    color: white;
+    border: none;
+}
+
+

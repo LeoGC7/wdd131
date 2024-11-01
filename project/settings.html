@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Final Project Settings Page">
+        <meta name="author" content="Leonardo Gameiro Correa">
+        <title>Settings</title>
+        <link href="styles/settings.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="scripts/settings.js" defer></script>
+    </head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="nav-bar">
+                <div class="nav-left">
+                    <img src="images/coin.png" alt="logo" class="logo">
+                    <p class="site-name">Expense Tracker</p>
+                </div>
+                <div class="nav-right">
+                    <button class="nav-item" onclick="homeTab()">
+                        <img src="images/home.png" alt="home-icon" class="nav-icon"> Home
+                    </button>
+                    <button class="nav-item" onclick="expensesTab()">
+                        <img src="images/coin.png" alt="home-icon" class="nav-icon"> Expenses
+                    </button>
+                    <button class="nav-item" onclick="incomesTab()">
+                        <img src="images/income.png" alt="home-icon" class="nav-icon"> Incomes
+                    </button>
+                    <button class="nav-item" onclick="settingsTab()">
+                        <img src="images/settings.png" alt="home-icon" class="nav-icon"> Settings
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="settings-header">
+                <div class="page-title">
+                    <img src="images/home.png" alt="settings-icon" class="page-icon">
+                    <h1 class="title">Settings</h1>
+                </div>
+                <p class="page-description">Here you can create and remove categories for your expense tracker</p>
+            </div>
+            <div class="settings-content">
+                <div class="expenses">
+                    <div class="category-add">
+                        <p class="category-title">Create an Expense category</p>
+                        <div class="input-container">
+                            <input type="text" class="category-input" name="category-name-expense" id="expenseName">
+                            <button class="add" onclick="addExpenseCategory()">Add</button>
+                        </div>
+                    </div>
+                    <div class="list">
+                        <p class="exp-cat">Expenses Categories</p>
+                        <ul class="category-list" id="expensesList">
+            
+                        </ul>
+                    </div>
+                </div>
+                <div class="incomes">
+                    <div class="category-add">
+                        <p class="category-title">Create an Income category</p>
+                        <div class="input-container">
+                            <input type="text" class="category-input" name="category-name-income" id="incomeName">
+                            <button class="add" onclick="addIncomeCategory()">Add</button>
+                        </div>
+                    </div>
+                    <div class="list">
+                        <p class="inc-cat">Incomes Categories</p>
+                        <ul class="category-list" id="incomesList">
+            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

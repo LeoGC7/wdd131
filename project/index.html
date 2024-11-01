@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Final Project Home Page">
+        <meta name="author" content="Leonardo Gameiro Correa">
+        <title>Home</title>
+        <link href="styles/index.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="scripts/index.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="nav-bar">
+                <div class="nav-left">
+                    <img src="images/coin.png" alt="logo" class="logo">
+                    <p class="site-name">Expense Tracker</p>
+                </div>
+                <div class="nav-right">
+                    <button class="nav-item" onclick="homeTab()">
+                        <img src="images/home.png" alt="home-icon" class="nav-icon"> Home
+                    </button>
+                    <button class="nav-item" onclick="expensesTab()">
+                        <img src="images/coin.png" alt="home-icon" class="nav-icon"> Expenses
+                    </button>
+                    <button class="nav-item" onclick="incomesTab()">
+                        <img src="images/income.png" alt="home-icon" class="nav-icon"> Incomes
+                    </button>
+                    <button class="nav-item" onclick="settingsTab()">
+                        <img src="images/settings.png" alt="home-icon" class="nav-icon"> Settings
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="main-left">
+                <div class="left-header">
+                    <div class="page-title">
+                        <img src="images/home.png" alt="home-icon" class="page-icon">
+                        <h1 class="title">Home</h1>
+                    </div>
+                    <p class="page-description">Here you can see a general view of all your financial data</p>
+                </div>
+                <div class="left-content">
+                    <div class="info-card">
+                        <p class="card-title">Total Expenses</p>
+                        <p class="card-info">$ <span id="totalExpenses">0.00</span></p>
+                    </div>
+                    <div class="info-card">
+                        <p class="card-title">Total Incomes</p>
+                        <p class="card-info">$ <span id="totalIncomes">0.00</span></p>
+                    </div>
+                    <div class="info-card">
+                        <p class="card-title">Budget Left</p>
+                        <p class="card-info">$ <span id="budgetLeft">0.00</span></p>
+                    </div>
+                    <div class="graph-card" id="graphCard">
+                        <p class="graph-title">Budget Left</p>
+                        <canvas id="chartContainer"></canvas>
+                        <p id="chart-percentage">60%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="main-right">
+                <div class="expenses-table-container">
+                    <p class="table-title">Expenses per category</p>
+                    <table class="expenses-table">
+                        <thead>
+                            <tr>
+                                <td>Category Name</td>
+                                <td>Total Spent</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Category #1</td>
+                                <td>50.00</td>
+                            </tr>
+                            <tr>
+                                <td>Category #2</td>
+                                <td>50.00</td>
+                            </tr>
+                            <tr>
+                                <td>Category #3</td>
+                                <td>50.00</td>
+                            </tr>
+                            <tr>
+                                <td>Category #4</td>
+                                <td>50.00</td>
+                            </tr>
+                            <tr>
+                                <td>Category #5</td>
+                                <td>50.00</td>
+                            </tr>
+                            <tr>
+                                <td>Category #6</td>
+                                <td>50.00</td>
+                            </tr>
+                            <tr>
+                                <td>Category #7</td>
+                                <td>50.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="incomes-table-container">
+                    <p class="table-title">Incomes per category</p>
+                    <table class="incomes-table">
+                        <thead>
+                            <tr>
+                                <td>Category Name</td>
+                                <td>Total Income</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Category #1</td>
+                                <td>50.00</td>
+                            </tr>
+                            <tr>
+                                <td>Category #2</td>
+                                <td>50.00</td>
+                            </tr>
+                            <tr>
+                                <td>Category #3</td>
+                                <td>50.00</td>
+                            </tr>
+                            <tr>
+                                <td>Category #4</td>
+                                <td>50.00</td>
+                            </tr>
+                            <tr>
+                                <td>Category #5</td>
+                                <td>50.00</td>
+                            </tr>
+                            <tr>
+                                <td>Category #6</td>
+                                <td>50.00</td>
+                            </tr>
+                            <tr>
+                                <td>Category #7</td>
+                                <td>50.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

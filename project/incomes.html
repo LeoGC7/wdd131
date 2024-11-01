@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Final Project Incomes Page">
+        <meta name="author" content="Leonardo Gameiro Correa">
+        <title>Incomes</title>
+        <link href="styles/incomes.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="scripts/incomes.js" defer></script>
+    </head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="nav-bar">
+                <div class="nav-left">
+                    <img src="images/coin.png" alt="logo" class="logo">
+                    <p class="site-name">Expense Tracker</p>
+                </div>
+                <div class="nav-right">
+                    <button class="nav-item" onclick="homeTab()">
+                        <img src="images/home.png" alt="home-icon" class="nav-icon"> Home
+                    </button>
+                    <button class="nav-item" onclick="expensesTab()">
+                        <img src="images/coin.png" alt="home-icon" class="nav-icon"> Expenses
+                    </button>
+                    <button class="nav-item" onclick="incomesTab()">
+                        <img src="images/income.png" alt="home-icon" class="nav-icon"> Incomes
+                    </button>
+                    <button class="nav-item" onclick="settingsTab()">
+                        <img src="images/settings.png" alt="home-icon" class="nav-icon"> Settings
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="incomes-header">
+                <div class="page-title">
+                    <img src="images/income.png" alt="settings-icon" class="page-icon">
+                    <h1 class="title">Incomes</h1>
+                </div>
+                <p class="page-description">Here you can report your incomes by category</p>
+            </div>
+            <div class="incomes-content">
+                <div class="report">
+                    <div class="date-input">
+                        <label for="date" class="inc-label">Date</label>
+                        <input type="date" class="inc-input" name="date" id="date">
+                    </div>
+                    <select name="income-category" id="income-select" class="inc-select">
+                        <option value="" disabled selected>Create or Select a category</option>
+                    </select>
+                    <div class="value-input">
+                        <label for="value" class="inc-label">Value</label>
+                        <input type="number" class="inc-input" name="value" id="value">
+                    </div>
+                    <button class="add" onclick="addIncome()">Add</button>
+                </div>
+                <div class="income-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Date</td>
+                                <td>Category</td>
+                                <td>Value</td>
+                                <td>Remove</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

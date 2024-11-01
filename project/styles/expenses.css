@@ -1,0 +1,203 @@
+/* General CSS */
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #0e0e11;
+}
+
+.wrapper {
+    max-width: 2000px;
+}
+
+/* Header CSS */
+.nav-bar {
+    display: flex;
+    align-items: center;
+    padding: 15px 40px;
+    justify-content: space-between;
+    border-bottom: 2px solid #34a853;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 30px;
+}
+
+.site-name {
+    margin: 0;
+    color: #34a853;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-right {
+    display: flex;
+    gap:  40px;
+}
+
+.nav-item {
+    display: flex;
+    gap: 10px;
+    padding: 10px 20px;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    color: #34a853;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.nav-icon {
+    width: 30px;
+}
+
+/* Main */
+main {
+    padding: 50px 150px;
+}
+
+.expenses-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.page-icon {
+    width: 60px;
+}
+
+.title {
+    font-size: 40px;
+    color: #34a853;
+    margin: 0;
+}
+
+.page-description {
+    color: #b4b4b4;
+    font-size: 20px;
+}
+
+.expenses-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.report {
+    margin-top: 20px;;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.date-input, .value-input {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.exp-label {
+    font-size: 12px;
+    position: absolute;
+    color: #34a853;
+    padding: 5px;
+    background-color: #0e0e11;
+    top: -12px;
+    left: 8px;
+}
+
+.exp-input {
+    background-color: transparent;
+    padding: 8px;
+    color:white;
+    caret-color: #34a853;
+    font-size: 18px;
+    border: 1px solid #b4b4b4;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.exp-select {
+    background-color: transparent;
+    padding: 8px;
+    color:white;
+    caret-color: #34a853;
+    font-size: 18px;
+    border: 1px solid #b4b4b4;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.exp-select option {
+    background-color: #0e0e11;
+    color: white;
+}
+
+.add {
+    background-color: #34a853;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.expense-table {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #34a853;
+    color: white;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #59595a;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #818181;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    color: white;
+    border: none;
+}
+
+.remove-button {
+    color: white;
+    font-weight: bold;
+    background-color: #ff5757;
+    border: none;
+    padding: 3px 7px;
+    border-radius: 3px;
+    cursor: pointer;
+}
