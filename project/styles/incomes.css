@@ -201,3 +201,13 @@ td {
     border-radius: 3px;
     cursor: pointer;
 }
+
+@media screen and (max-width: 1500px) {
+    .incomes-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 30px;
+        align-items: start;
+    }
+}

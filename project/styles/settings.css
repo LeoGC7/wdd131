@@ -94,9 +94,9 @@ main {
 }
 
 .settings-content {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 50px;
-    padding: 0px 200px;
 }
 
 .expenses, .incomes {
@@ -180,4 +180,14 @@ li {
     padding: 3px 7px;
     border-radius: 3px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1500px) {
+    .settings-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 30px;
+        align-items: start;
+    }
 }
