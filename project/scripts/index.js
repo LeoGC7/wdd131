@@ -15,12 +15,14 @@ function settingsTab() {
     window.location.href = 'settings.html';
 }
 
-// Load data from local storage on page load
+// Update load functions to also call the new table loading functions
 document.addEventListener("DOMContentLoaded", () => {
     loadIncomeCategories();
     loadIncomes();
     loadExpenses();
     updateFinancialData();
+    loadExpensesTable();
+    loadIncomesTable();
 });
 
 // Function to load expenses from local storage
@@ -100,4 +102,58 @@ function updateChart(totalExpenses, totalIncomes) {
             }
         }
     });
+}
+
+// Function to load expenses into the expenses table
+function loadExpensesTable() {
+    const expenses = loadExpenses();
+    const expensesBody = document.getElementById("expensesBody");
+    expensesBody.innerHTML = ""; // Clear the table body
+
+    const expensesSummary = {};
+
+    expenses.forEach(expense => {
+        // Sum expenses by category
+        if (!expensesSummary[expense.category]) {
+            expensesSummary[expense.category] = 0;
+        }
+        expensesSummary[expense.category] += parseFloat(expense.value);
+    });
+
+    // Populate the expenses table
+    for (const [category, total] of Object.entries(expensesSummary)) {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+            <td>${category}</td>
+            <td>$ ${total.toFixed(2)}</td>
+        `;
+        expensesBody.appendChild(tr);
+    }
+}
+
+// Function to load incomes into the incomes table
+function loadIncomesTable() {
+    const incomes = loadIncomes();
+    const incomesBody = document.getElementById("incomesBody");
+    incomesBody.innerHTML = ""; // Clear the table body
+
+    const incomesSummary = {};
+
+    incomes.forEach(income => {
+        // Sum incomes by category
+        if (!incomesSummary[income.category]) {
+            incomesSummary[income.category] = 0;
+        }
+        incomesSummary[income.category] += parseFloat(income.value);
+    });
+
+    // Populate the incomes table
+    for (const [category, total] of Object.entries(incomesSummary)) {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+            <td>${category}</td>
+            <td>$ ${total.toFixed(2)}</td>
+        `;
+        incomesBody.appendChild(tr);
+    }
 }
