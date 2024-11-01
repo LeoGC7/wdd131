@@ -17,6 +17,7 @@ function settingsTab() {
 
 // Load data from local storage on page load
 document.addEventListener("DOMContentLoaded", () => {
+    loadIncomeCategories();
     loadIncomes();
     loadExpenses();
     updateFinancialData();
@@ -34,6 +35,13 @@ function loadIncomes() {
     const incomes = JSON.parse(localStorage.getItem('incomes')) || [];
     // Display incomes or perform other operations as needed
     return incomes;
+}
+
+// Function to load income categories from local storage
+function loadIncomeCategories() {
+    const incomeCategories = JSON.parse(localStorage.getItem('incomeCategories')) || [];
+    // Display income categories or perform other operations as needed
+    return incomeCategories;
 }
 
 // Function to retrieve total expenses
